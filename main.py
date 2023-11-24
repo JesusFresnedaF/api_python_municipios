@@ -6,6 +6,7 @@ from fastapi.responses import HTMLResponse  # Necesario para enviar html
 from fastapi import APIRouter
 from fastapi.security import HTTPBasic
 from urllib.parse import quote
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 router = APIRouter()
