@@ -102,7 +102,7 @@ async def get_html():
             <input type="text" id="municipio" name="texto" placeholder="palma">
             <br>
             <button type="button" onclick="filtrar()">Filtrar</button>
-            <button type="button" onclick="realizarAccion('/tabla')">Mostrar todo</button>
+            <button type="button" onclick="mostrarTodo()">Mostrar todo</button>
             <button type="button" onclick="mostrarTotal()">Nº de alojamientos/municipio</button>
         </form>
         
@@ -119,6 +119,10 @@ async def get_html():
                     .catch(error => {{
                         console.error('Error al realizar la acción:', error);
                     }});
+            }}
+
+            function mostrarTodo(){{
+                realizarAccion('/tabla');
             }}
                 
             function filtrar() {{    
