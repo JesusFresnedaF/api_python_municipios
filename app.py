@@ -294,7 +294,3 @@ async def get_total():
     else:
         print("Error en la respuesta de la API:", response.status_code)
         return HTMLResponse(content="<p>Error al acceder a la API</p>", status_code=500)
-
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=800, log_level="info")
