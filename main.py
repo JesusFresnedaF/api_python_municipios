@@ -111,7 +111,7 @@ async def get_html():
 
         <script>
             function realizarAccion(ruta) {{
-                fetch(`https://api-municipios-mallorca.onrender.com${ruta}`)
+                fetch(`https://api-municipios-mallorca.onrender.com${{ruta}}`)
                     .then(response => response.text()) // Obtener el contenido como texto HTML
                     .then(html => {{
                         // Mostrar el contenido HTML en el contenedor
