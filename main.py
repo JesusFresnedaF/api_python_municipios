@@ -11,6 +11,15 @@ app = FastAPI()
 router = APIRouter()
 security = HTTPBasic()
 
+# Configuración de CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Esto permite solicitudes desde cualquier origen, puedes ajustarlo según tus necesidades
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.get("/", response_class=HTMLResponse)
 async def get_html():
