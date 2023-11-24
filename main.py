@@ -14,7 +14,7 @@ security = HTTPBasic()
 
 @app.get("/", response_class=HTMLResponse)
 async def get_html():
-    server_host = "192.168.1.23"
+    server_host = "https://api-municipios-mallorca.onrender.com"
     html_content = f"""
     <!DOCTYPE html>
     <html lang="es">
